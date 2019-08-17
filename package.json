@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws4": "^1.8.0",
     "awscred": "^1.4.2",
     "bluebird": "^3.5.5",
     "chai": "^4.2.0",
