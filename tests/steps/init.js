@@ -2,6 +2,7 @@
 
 const co = require('co')
 const Promise = require('bluebird')
+const awscred = Promise.promisifyAll(require('awscred'))
 
 let initialized = false
 
@@ -19,6 +20,13 @@ let init = co.wrap(function* () {
 
   console.log("AWS credentials loaded")
 
+  if (!process.env.AWS_ACCESS_KEY_ID) {
+    let cred = (yield awscred.loadAsync()).credentials
+
+    process.env.AWS_ACCESS_KEY_ID = cred.accessKeyId
+    process.env.AWS_SECRET_ACCESS_KEY = cred.secretAccessKey
+  }
+  
   initialized = true
 })
 
