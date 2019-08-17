@@ -17,6 +17,7 @@ let an_authenticated_user = function* () {
   let firstName = chance.first();
   let lastName  = chance.last();
   let username  = `test-${firstName}-${lastName}-${chance.string({length: 8})}`;
+  console.log(`username: ${username}`)
   let password  = random_password();
   let email     = `${firstName}-${lastName}@big-mouth.com`;
 
