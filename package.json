@@ -1,0 +1,32 @@
+{
+  "name": "big-mouth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "integration-test": "env TEST_MODE=handler mocha tests/test_cases --reporter spec --retries 3 --timeout 5000",
+    "acceptance-test": "env TEST_MODE=http TEST_ROOT=https://6a18n1saqj.execute-api.us-east-1.amazonaws.com/dev mocha tests/test_cases --reporter spec --retries 3 --timeout 5000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws4": "^1.8.0",
+    "awscred": "^1.4.2",
+    "bluebird": "^3.5.5",
+    "chai": "^4.2.0",
+    "chance": "^1.0.18",
+    "cheerio": "^1.0.0-rc.3",
+    "co": "^4.6.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.0",
+    "mustache": "^3.0.1",
+    "superagent": "^5.1.0",
+    "superagent-promise": "^1.1.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.503.0",
+    "serverless": "^1.49.0",
+    "serverless-pseudo-parameters": "^2.4.0",
+    "serverless-sam": "^0.2.0"
+  }
+}
