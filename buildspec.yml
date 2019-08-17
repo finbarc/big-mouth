@@ -9,4 +9,4 @@ phases:
       - chmod +x build.sh
       - ./build.sh int-test
       - ./build.sh deploy dev
-      - ./build.sh accepatance-test
+      - ./build.sh acceptance-test
